@@ -19,9 +19,9 @@ bodyDiv.style.alignItems = "center";
 
 startButton.style.fontSize = "50px";
 startButton.style.textTransform = 'uppercase';
-stopButton.style.textTransform = 'uppercase';
 startButton.style.marginRight = "20px";
 stopButton.style.fontSize = '50px';
+stopButton.style.textTransform = 'uppercase';
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;

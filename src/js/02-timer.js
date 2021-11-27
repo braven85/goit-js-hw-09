@@ -84,6 +84,9 @@ function addLeadingZero(value) {
 }
 
 startButton.addEventListener('click', () => {
+  startButton.disabled = true;
+  dateInput.style.pointerEvents = 'none';
+  Notiflix.Notify.success('Countdown started!');
   timer = setInterval(() => {
     const actualDate = new Date();
     const timeToCountdown = countdownData.getTime() - actualDate.getTime();
@@ -96,7 +99,7 @@ startButton.addEventListener('click', () => {
     } else {
       clearInterval(timer);
       Notiflix.Notify.success('Countdown successfully finished!');
-      startButton.disabled = true;
+      dateInput.style.pointerEvents = 'auto';
     }
   }, 1000);
 
