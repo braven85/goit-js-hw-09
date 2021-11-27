@@ -10,16 +10,30 @@ const daysField = document.querySelector('span[data-days]');
 const hoursField = document.querySelector('span[data-hours]');
 const minutesField = document.querySelector('span[data-minutes]');
 const secondsField = document.querySelector('span[data-seconds]');
-let timerDivs = document.querySelector('.timer');
-//let allFieldDivs = document.querySelectorAll('.field');
-//console.log(allFieldDivs);
+const timerDivs = document.querySelector('.timer');
+const fieldDiv = document.querySelectorAll('.field');
+const spanValue = document.querySelectorAll('.value');
+const spanLabel = document.querySelectorAll('.label');
 
 timerDivs.style.display = "flex";
 timerDivs.style.marginTop = "20px";
-// allFieldDivs.style.display = "column";
-// allFieldDivs.style.marginRight = "20px";
-//timerDivs.children.style.margin = "2px";
 
+fieldDiv.forEach(function (v) {
+  v.style.display = 'flex';
+  v.style.flexDirection = "column";
+  v.style.marginRight = "20px";
+  v.style.textAlign = "center";
+})
+
+spanValue.forEach(function (v) {
+  v.style.fontSize = "40px";
+  v.style.fontWeight = "bold";
+})
+
+spanLabel.forEach(function (v) {
+  v.style.fontWeight = "bold";
+  v.style.textTransform = "uppercase";
+});
 
 startButton.disabled = true;
 
