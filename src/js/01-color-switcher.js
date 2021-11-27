@@ -5,6 +5,24 @@ let timer = null;
 
 stopButton.disabled = true;
 
+const bodyDiv = document.createElement('div');
+bodyDiv.className = 'center-div';
+
+startButton.before(bodyDiv);
+bodyDiv.append(startButton);
+bodyDiv.append(stopButton);
+
+bodyDiv.style.display = "flex";
+bodyDiv.style.justifyContent = "center";
+bodyDiv.style.minHeight = "90vh";
+bodyDiv.style.alignItems = "center";
+
+startButton.style.fontSize = "50px";
+startButton.style.textTransform = 'uppercase';
+stopButton.style.textTransform = 'uppercase';
+startButton.style.marginRight = "20px";
+stopButton.style.fontSize = '50px';
+
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
