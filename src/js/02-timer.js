@@ -52,7 +52,6 @@ const options = {
       Notiflix.Notify.failure('Please choose a date in the future');
     } else {
       startButton.disabled = false;
-      console.log(selectedDates[0]);
       countdownData = selectedDates[0];
       Notiflix.Notify.success('You have successfully chosen a date from the future');
     }
