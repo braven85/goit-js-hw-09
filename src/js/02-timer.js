@@ -15,6 +15,9 @@ const fieldDiv = document.querySelectorAll('.field');
 const spanValue = document.querySelectorAll('.value');
 const spanLabel = document.querySelectorAll('.label');
 
+dateInput.style.fontSize = "20px";
+startButton.style.fontSize = "20px";
+
 timerDivs.style.display = "flex";
 timerDivs.style.marginTop = "20px";
 
