@@ -9,8 +9,20 @@ const sendForm = data => {
   data.preventDefault();
 
   let delay = firstDelay.valueAsNumber;
+  if (delay < 0) {
+    firstDelay.valueAsNumber = 0;
+    return Notiflix.Notify.failure("First delay value can't be lower than 0!");
+  }
   let step = delayStep.valueAsNumber;
+  if (step < 0) {
+    delayStep.valueAsNumber = 0;
+    return Notiflix.Notify.failure("Delay step value can't be lower than 0!");
+  }
   let amount = amountValue.valueAsNumber;
+  if (amount < 0) {
+    amountValue.valueAsNumber = 0;
+    return Notiflix.Notify.failure("Amount value can't be lower than 0!");
+  }
 
   function createPromise(position, delay) {
     return new Promise((resolve, reject) => {
