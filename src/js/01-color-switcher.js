@@ -12,14 +12,14 @@ startButton.before(bodyDiv);
 bodyDiv.append(startButton);
 bodyDiv.append(stopButton);
 
-bodyDiv.style.display = "flex";
-bodyDiv.style.justifyContent = "center";
-bodyDiv.style.minHeight = "90vh";
-bodyDiv.style.alignItems = "center";
+bodyDiv.style.display = 'flex';
+bodyDiv.style.justifyContent = 'center';
+bodyDiv.style.minHeight = '90vh';
+bodyDiv.style.alignItems = 'center';
 
-startButton.style.fontSize = "50px";
+startButton.style.fontSize = '50px';
 startButton.style.textTransform = 'uppercase';
-startButton.style.marginRight = "20px";
+startButton.style.marginRight = '20px';
 stopButton.style.fontSize = '50px';
 stopButton.style.textTransform = 'uppercase';
 
@@ -40,4 +40,4 @@ stopButton.addEventListener('click', () => {
   stopButton.disabled = true;
   startButton.disabled = false;
   clearInterval(timer);
-})
+});

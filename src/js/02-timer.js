@@ -15,27 +15,27 @@ const fieldDiv = document.querySelectorAll('.field');
 const spanValue = document.querySelectorAll('.value');
 const spanLabel = document.querySelectorAll('.label');
 
-dateInput.style.fontSize = "20px";
-startButton.style.fontSize = "20px";
+dateInput.style.fontSize = '20px';
+startButton.style.fontSize = '20px';
 
-timerDivs.style.display = "flex";
-timerDivs.style.marginTop = "20px";
+timerDivs.style.display = 'flex';
+timerDivs.style.marginTop = '20px';
 
 fieldDiv.forEach(function (v) {
   v.style.display = 'flex';
-  v.style.flexDirection = "column";
-  v.style.marginRight = "20px";
-  v.style.textAlign = "center";
-})
+  v.style.flexDirection = 'column';
+  v.style.marginRight = '20px';
+  v.style.textAlign = 'center';
+});
 
 spanValue.forEach(function (v) {
-  v.style.fontSize = "40px";
-  v.style.fontWeight = "bold";
-})
+  v.style.fontSize = '40px';
+  v.style.fontWeight = 'bold';
+});
 
 spanLabel.forEach(function (v) {
-  v.style.fontWeight = "bold";
-  v.style.textTransform = "uppercase";
+  v.style.fontWeight = 'bold';
+  v.style.textTransform = 'uppercase';
 });
 
 startButton.disabled = true;
@@ -75,11 +75,11 @@ function convertMs(ms) {
 }
 
 function addLeadingZero(value) {
-    if (value.toString().length < 2) {
-      return '0' + value;
-    } else {
-      return value;
-    }
+  if (value.toString().length < 2) {
+    return '0' + value;
+  } else {
+    return value;
+  }
 }
 
 startButton.addEventListener('click', () => {
@@ -101,5 +101,4 @@ startButton.addEventListener('click', () => {
       dateInput.style.pointerEvents = 'auto';
     }
   }, 1000);
-
 });
