@@ -8,21 +8,19 @@ const createPromiseButton = document.querySelector('button[type="submit"]');
 const sendForm = data => {
   data.preventDefault();
 
+  function validation(toValidate, valueToSet, notificationText) {
+    if (toValidate < 0) {
+      valueToSet.valueAsNumber = 0;
+      return Notiflix.Notify.failure(`${notificationText} value can't be lower than 0!`);
+    }
+  }
+
   let delay = firstDelay.valueAsNumber;
-  if (delay < 0) {
-    firstDelay.valueAsNumber = 0;
-    return Notiflix.Notify.failure("First delay value can't be lower than 0!");
-  }
+  validation(delay, firstDelay, "First delay");
   let step = delayStep.valueAsNumber;
-  if (step < 0) {
-    delayStep.valueAsNumber = 0;
-    return Notiflix.Notify.failure("Delay step value can't be lower than 0!");
-  }
+  validation(step, delayStep, "Delay");
   let amount = amountValue.valueAsNumber;
-  if (amount < 0) {
-    amountValue.valueAsNumber = 0;
-    return Notiflix.Notify.failure("Amount value can't be lower than 0!");
-  }
+  validation(amount, amountValue, "Amount");
 
   function createPromise(position, delay) {
     return new Promise((resolve, reject) => {
